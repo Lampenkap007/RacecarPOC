@@ -56,11 +56,11 @@ const obstacleMaterial = new THREE.MeshPhongMaterial({ color: 0xee0808 });
 
 const obstacleMesh1 = new THREE.Mesh(obstacleGeometry, obstacleMaterial);
 scene.add(obstacleMesh1);
-obstacleMesh1.position.set(-4, 0, 0);
+obstacleMesh1.position.set(-2, 0, 0);
 
 const obstacleMesh2 = new THREE.Mesh(obstacleGeometry, obstacleMaterial);
 scene.add(obstacleMesh2);
-obstacleMesh2.position.set(4, 0, 0);
+obstacleMesh2.position.set(2, 0, 0);
 
 const obstacle1 = new YUKA.GameEntity();
 obstacle1.position.copy(obstacleMesh1.position);
@@ -103,7 +103,7 @@ vehicle.steering.add(arriveBehavior);
 
 vehicle.position.set(0, 0, -5);
 
-vehicle.maxSpeed = 3;
+vehicle.maxSpeed = 8;
 
 const targetPosition = new THREE.Vector2();
 

@@ -613,10 +613,10 @@ const obstacleMaterial = new _three.MeshPhongMaterial({
 });
 const obstacleMesh1 = new _three.Mesh(obstacleGeometry, obstacleMaterial);
 scene.add(obstacleMesh1);
-obstacleMesh1.position.set(-4, 0, 0);
+obstacleMesh1.position.set(-2, 0, 0);
 const obstacleMesh2 = new _three.Mesh(obstacleGeometry, obstacleMaterial);
 scene.add(obstacleMesh2);
-obstacleMesh2.position.set(4, 0, 0);
+obstacleMesh2.position.set(2, 0, 0);
 const obstacle1 = new _yuka.GameEntity();
 obstacle1.position.copy(obstacleMesh1.position);
 obstacle1.boundingRadius = obstacleGeometry.boundingSphere.radius;
@@ -649,7 +649,7 @@ entityManager.add(target);
 const arriveBehavior = new _yuka.ArriveBehavior(target.position, 3, 0.5);
 vehicle.steering.add(arriveBehavior);
 vehicle.position.set(0, 0, -5);
-vehicle.maxSpeed = 3;
+vehicle.maxSpeed = 8;
 const targetPosition = new _three.Vector2();
 window.addEventListener("scroll", function(e) {
     targetPosition.x = Math.sin(this.window.scrollY / this.document.body.offsetHeight * 20 - 5);
